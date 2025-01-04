@@ -1,24 +1,18 @@
 import java.util.Scanner;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class SolucaoBinarySearch {
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Informe sua senha com 4 dígitos positivos");
         int senha = sc.nextInt();
-        int forcaBruta = 0;
         int numeroTentativas = 0;
-        int forcaBrutaMaximo = 9999;
-
-        long initialTimeMili = System.currentTimeMillis();
-
-
         int valorMinimo = 0;
         int valorMaximo = 9999;
 
+        long initialTimeMili = System.currentTimeMillis();
 
         while (valorMinimo <= valorMaximo) {
             int mid = (valorMinimo + valorMaximo) / 2;
@@ -37,11 +31,7 @@ public class Main {
         }
 
         long finalTimeMili = System.currentTimeMillis();
-
         var totalTimeMili = finalTimeMili - initialTimeMili;
         System.out.println("O tempo gasto para descobrir a senha foi de: " + totalTimeMili);
-
     }
-
-
 }
